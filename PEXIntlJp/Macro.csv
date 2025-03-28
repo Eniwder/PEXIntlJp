@@ -1,0 +1,9 @@
+﻿Address,ReferenceAddress,Translation
+100bcd30,1004c349,スロット
+100BCD2C,1004C30E,[?]
+100bcd38,1004c50c,準備\t
+100bcd40,1004c530,操作中\t
+100bcd4c,1004c554,ダミー\t
+100bcd54,1004c56e,記録中\t
+100bcdfc,1004f559,スロット%i: %s\t%dフレーム
+100bcdfc,10050c06,スロット%i: %s\t%dフレーム

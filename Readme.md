@@ -1,0 +1,1 @@
+PraciceEXIntlで使われる日本語用データ
