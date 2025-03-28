@@ -1,0 +1,45 @@
+name: Deploy and Release
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  release:
+    name: Create Archive
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set timestamp
+        id: timestamp
+        run: echo "timestamp=$(TZ=Asia/Tokyo date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - name: Create zip file
+        run: zip -r PEXIntlJp.zip PEXIntlJp
+      - name: Upload assets
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "PEXIntlJp.zip"
+          allowUpdates: true
+          tag: v1.0
+          name: ${{ env.timestamp }}
+          body: 以下の「▼Assets」にある「PEXIntlJp.zip」からDLしてください。
+          replacesArtifacts: true
