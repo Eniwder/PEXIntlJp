@@ -12,5 +12,5 @@ pyftsubset ./font/NotoSerifJP-Medium_150.ttf --text-file=subset_chars.txt --outp
 pyftsubset ./font/NotoSerifJP-Medium_150.ttf --text-file=subset_chars.txt --output-file=PEXIntlJp/Macro.ttf
 pyftsubset ./font/NotoSansJP-SemiBold_200.ttf --text-file=subset_chars.txt --output-file=PEXIntlJp/OptionsLeft.ttf
 pyftsubset ./font/NotoSansJP-SemiBold_165y50.ttf --text-file=subset_chars.txt --output-file=PEXIntlJp/OptionsRight.ttf
-pyftsubset ./font/NotoSansJP-SemiBold_org.ttf --text-file=subset_chars.txt --output-file=PEXIntlJp/Trigger.ttf
+pyftsubset ./font/NotoSansJP-SemiBold_125.ttf --text-file=subset_chars.txt --output-file=PEXIntlJp/Trigger.ttf
 ```
