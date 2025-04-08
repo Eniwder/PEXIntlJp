@@ -4,12 +4,14 @@
 
 自分用メモ：
 
-```python -m venv venv
+```bash
+python -m venv venv
 ./venv/Scripts/activate
 pip install -r requirements.txt
 python ./extractchar.py
 ```
 
-```pyftsubset ./font/NotoSerifJP-Medium_150.ttf --text-file=subset_chars.txt --output-file=PEXIntlJp/Title.ttf
+```bash
+pyftsubset ./font/NotoSerifJP-Medium_150.ttf --text-file=subset_chars.txt --output-file=PEXIntlJp/Title.ttf
 pyftsubset ./font/NotoSerifJP-Medium_150.ttf --text=ABCDE --output-file=PEXIntlJp/Title.ttf
 ```
