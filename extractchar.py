@@ -22,7 +22,7 @@ def extract_text_from_csv_files(folder_path):
 
 # 使用例
 folder_path = "PEXIntlJp"
-text_data = extract_text_from_csv_files(folder_path) + "銭"
+text_data = extract_text_from_csv_files(folder_path) + "銭昇竜波動逆"
 
 # 結果を表示
 print(text_data)
